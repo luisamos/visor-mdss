@@ -468,13 +468,22 @@
         <div class="card-body p-3">
           <div class="mb-3">
             <label for="archivoZipKmlKmz" class="col-form-label-sm">
+<<<<<<< HEAD
               <strong>1. </strong> Cargar un archivo de formato Shape File comprimido en formato (.zip):
+=======
+              Cargar un archivo de formato Shape File comprimido en formato (.zip)
+>>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
             </label>
             <input class="form-control form-control-sm" type="file" id="archivoZipKmlKmz"
               aria-describedby="archivoHelp" />
           </div>
+<<<<<<< HEAD
           <div class="mb-3">
             <label for="colorPicker" class="col-form-label-sm"><strong>2. </strong>Elegir un color:</label>&nbsp;
+=======
+          <div class="mb-3 flex">
+            <label for="colorPicker" class="col-form-label-sm">Selecciona un color:</label>&nbsp;
+>>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
             <div id="colorPicker" class="color-picker-btn"></div>
           </div>
           <div id="mensajeCargar" class="col-auto table-container"></div>
@@ -492,6 +501,7 @@
       </div>
 
       <div id="panel2" class="side-panel card" style="display: none;">
+<<<<<<< HEAD
         <div class="panel-header d-flex justify-content-between align-items-center p-2">
           <p class="mb-0">Graficar sobre el mapa</p>
           <button class="btn-close" data-close="panel2" aria-label="Cerrar"></button>
@@ -532,10 +542,53 @@
       <div id="panel3" class="side-panel card" style="display: none;">
         <div class="panel-header d-flex justify-content-between align-items-center p-2">
           <p class="mb-0">Conectar a servicios web</p>
+=======
+      <div class="panel-header d-flex justify-content-between align-items-center p-2">
+        <p class="mb-0">Graficar sobre el mapa</p>
+        <button class="btn-close" data-close="panel2" aria-label="Cerrar"></button>
+      </div>
+      <div class="card-body p-3">
+        <div class="mb-3">
+          <label class="col-form-label-sm">
+            Tipo de geometría:
+          </label>
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="None" autocomplete="off" checked>
+            <label class="btn btn-outline-primary btn-sm" for="None">Ninguno</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="Point" autocomplete="off">
+            <label class="btn btn-outline-primary btn-sm" for="Point">Punto</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="LineString" autocomplete="off">
+            <label class="btn btn-outline-primary btn-sm" for="LineString">Linea</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="Polygon" autocomplete="off">
+            <label class="btn btn-outline-primary btn-sm" for="Polygon">Polígono</label>
+          </div>
+        </div>
+        <div id="mensajeGraficar" class="col-auto table-container"></div>
+        <hr class="my-3" />
+
+        <div class="d-flex justify-content-center gap-2">
+          <button id="descargarDibujo" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-download"></i> Descargar
+          </button>
+          <button id="limpiarDibujo" class="btn btn-outline-danger btn-sm disabled">
+            <i class="bi bi-trash"></i> Limpiar
+          </button>
+        </div>
+      </div>
+    </div>
+
+      <div id="panel3" class="side-panel card" style="display: none;">
+        <div class="panel-header d-flex justify-content-between align-items-center p-2">
+          <p class="mb-0">Ubicar por coordenadas</p>
+>>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
           <button class="btn-close" data-close="panel3" aria-label="Cerrar"></button>
         </div>
         <div class="card-body p-3">
           <div class="mb-3">
+<<<<<<< HEAD
             <label for="tipoServicioWeb" class="col-form-label-sm">
               Tipo de servicio:
             </label>
@@ -552,16 +605,44 @@
               placeholder="http://www.institucion/servicio/ogc|rest?">
           </div>
 
+=======
+            <label for="sistemaReferencia" class="col-form-label-sm">
+              Sistema de referencia:
+            </label>
+            <select id="sistemaReferencia" class="form-select form-select-sm">
+              <option value="4326" selected>WGS84 (decimales)</option>
+              <option value="32717">UTM 17S</option>
+              <option value="32718">UTM 18S</option>
+              <option value="32719">UTM 19S</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="coordenadasX" class="col-form-label col-form-label-sm" id="labelX">Longitud:</label>
+            <input type="text" class="form-control form-control-sm" id="coordenadaX">
+          </div>
+          <div class="mb-3">
+            <label for="coordenadasY" class="col-form-label col-form-label-sm" id="labelY">Latitud:</label>
+            <input type="text" class="form-control form-control-sm" id="coordenadaY">
+          </div>
+>>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
           <div class="mb-3">
             <div id="mensajeUbicarCoordenadas"></div>
           </div>
           <hr class="my-3" />
 
+<<<<<<< HEAD
           <div class="d-flex justify-content-center gap-2">
             <button id="conectarServicioWeb" class="btn btn-outline-primary btn-sm">
               <i class="bi bi-arrow-down-short"></i> Conectar
             </button>
             <button id="limpiarServicioWeb" class="btn btn-outline-danger btn-sm">
+=======
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button id="ubicarCoordenadas" class="btn btn-outline-primary btn-sm">
+              <i class="bi bi-crosshair"></i> Ir
+            </button>
+            <button id="limpiarCoordenadas" class="btn btn-outline-danger btn-sm">
+>>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
               <i class="bi bi-trash"></i> Limpiar
             </button>
           </div>
