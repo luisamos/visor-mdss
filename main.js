@@ -54,11 +54,14 @@ global.mapa.on('pointermove', mousePosicion);
 global.mapa.getView().on('change:resolution', actualizarEscala);
 global.mapa.once('rendercomplete', function () { actualizarEscala(); });
 
-// 4. Control Inicio
+// 4. Control inicio
 import './assets/js/controlVistaInicioMasMenos';
 
-// 5. Control Cargar archivos de tipo ShapeFile
+// 5. Control cargar archivos de tipo ShapeFile
 import './assets/js/controlCargarArchivoLocal';
 
-// 6. Control Graficar sobre el mapa
+// 6. Control graficar sobre el mapa
 import './assets/js/controlGraficar';
+
+// 7. Control cargar servicios web
+import './assets/js/controlCargarServiciosWeb';

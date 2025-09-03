@@ -6,17 +6,10 @@ import proj4 from "proj4";
 import {
   fechaHoy,
   proyeccion3857,
-<<<<<<< HEAD
   proyeccion32719,
   mensaje,
   fuente,
   estilosDibujo,
-=======
-  mensaje,
-  fuente,
-  estilosDibujo,
-  obtenerSRID,
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
 } from "./configuracion";
 
 global.dibujo = null;
@@ -65,12 +58,7 @@ descargarDibujo.addEventListener("click", function () {
 
   if (features.length > 0) {
     features.forEach((feature) => {
-<<<<<<< HEAD
       const geometry = feature.getGeometry();
-=======
-      const geometry = feature.getGeometry(),
-        projection = document.getElementById("srid");
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
       let coordinates = geometry.getCoordinates(),
         transformedCoordinates;
 
@@ -80,11 +68,7 @@ descargarDibujo.addEventListener("click", function () {
         case "Point":
           transformedCoordinates = proj4(
             proyeccion3857,
-<<<<<<< HEAD
             proyeccion32719,
-=======
-            obtenerSRID(projection.value),
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
             coordinates
           );
           feature.setGeometry(new Point(transformedCoordinates));
@@ -92,11 +76,7 @@ descargarDibujo.addEventListener("click", function () {
 
         case "LineString":
           transformedCoordinates = coordinates.map((coord) =>
-<<<<<<< HEAD
             proj4(proyeccion3857, proyeccion32719, coord)
-=======
-            proj4(proyeccion3857, obtenerSRID(projection.value), coord)
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
           );
           feature.setGeometry(new LineString(transformedCoordinates));
           break;
@@ -104,11 +84,7 @@ descargarDibujo.addEventListener("click", function () {
         case "Polygon":
           transformedCoordinates = coordinates.map((ring) =>
             ring.map((coord) =>
-<<<<<<< HEAD
               proj4(proyeccion3857, proyeccion32719, coord)
-=======
-              proj4(proyeccion3857, obtenerSRID(projection.value), coord)
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
             )
           );
           feature.setGeometry(new Polygon(transformedCoordinates));

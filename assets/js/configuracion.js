@@ -242,3 +242,28 @@ export function obtenerSRID(srid) {
       return proyeccion3857;
   }
 }
+
+export function validarUrl(url) {
+  try {
+    new URL(url);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
+
+export function modificarURLServicioWMS(url) {
+  if (!/\?/.test(url) || !/(?:[?&])(REQUEST|SERVICE)=/i.test(url)) {
+    const parametrosFaltantes = [];
+
+    if (!/(?:[?&])REQUEST=/i.test(url)) {
+      parametrosFaltantes.push('REQUEST=GetCapabilities');
+    }
+    if (!/(?:[?&])SERVICE=/i.test(url)) {
+      parametrosFaltantes.push('SERVICE=WMS');
+    }
+
+    url += (url.includes('?') ? '&' : '?') + parametrosFaltantes.join('&');
+  }
+  return url;
+}

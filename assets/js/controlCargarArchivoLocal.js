@@ -1,10 +1,6 @@
 import JSZip from 'jszip';
 import shp from 'shpjs';
-<<<<<<< HEAD
 //import { fileTypeFromBuffer } from 'file-type';
-=======
-import { fileTypeFromBuffer } from 'file-type';
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
 import sanitize from 'sanitize-filename';
 import { Vector as VectorSource } from 'ol/source';
 import { Vector as VectorLayer } from 'ol/layer';
@@ -15,18 +11,12 @@ import { proyeccion3857, mensaje, generarIdUnico, buscarCapaPorNombre } from './
 import Pickr from '@simonwep/pickr';
 
 const subirArchivo = document.getElementById('subirArchivo'),
-<<<<<<< HEAD
     limpiarArchivo = document.getElementById('limpiarArchivo'),
     archivoZipKml = document.getElementById('archivoZipKmlKmz'),
     leyendDiv = document.getElementById("divLeyendas");
 
 global.vectorLayer = null;
 
-=======
-    archivoZipKml = document.getElementById('archivoZipKmlKmz'),
-    leyendDiv = document.getElementById("divLeyendas");
-
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
 let hexColor = '#FF0000';
 const pickr = Pickr.create({
     el: '#colorPicker',
@@ -140,11 +130,7 @@ function agregarCapa(feature, capaId, capaNombre, tipo) {
     const vectorSource = new VectorSource({
         features: feature,
     });
-<<<<<<< HEAD
     global.vectorLayer = new VectorLayer({
-=======
-    const vectorLayer = new VectorLayer({
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
         source: vectorSource,
         properties: {
             name: capaId,
@@ -197,13 +183,8 @@ function agregarCapa(feature, capaId, capaNombre, tipo) {
         }
     });
 
-<<<<<<< HEAD
     global.mapa.addLayer(global.vectorLayer);
     //actualizarListaCapas(capaId, capaNombre, tipo, global.vectorLayer);
-=======
-    global.mapa.addLayer(vectorLayer);
-    actualizarListaCapas(capaId, capaNombre, tipo, vectorLayer);
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
 
     const extension = vectorSource.getExtent();
     global.vista.fit(extension, {
@@ -444,7 +425,6 @@ subirArchivo.addEventListener('click', function () {
     }
 });
 
-<<<<<<< HEAD
 limpiarArchivo.addEventListener('click', function () {
     archivoZipKml.value = '';
     limpiarArchivo.classList.add('disabled');
@@ -454,8 +434,6 @@ limpiarArchivo.addEventListener('click', function () {
     }
 });
 
-=======
->>>>>>> fab9538ac1e6b6f1cfece8ddc1f1645d27604d04
 export async function archivoZipFile(file) {
     try {
         // Validación básica
