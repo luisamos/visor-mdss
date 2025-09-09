@@ -29,8 +29,10 @@ function actualizarLeyenda() {
 
 function activarBoton(id, estado) {
     const button = document.getElementById('btn' + id);
-    if (estado) button.style.display = '';
-    else button.style.display = 'none';
+    if (button !== undefined) {
+        if (estado) button.style.display = '';
+        else button.style.display = 'none';
+    }
 }
 
 document.getElementById('capasBase').addEventListener('click', function (e) {
@@ -51,6 +53,7 @@ checkboxes.forEach(checkbox => {
     checkbox.addEventListener('click', function () {
         if (this.id !== 'conFichaLotes' &&
             this.id !== 'sinFichaLotes') {
+            //console.log(this.id);
             const capaTematica = buscarCapaId(this.id);
             if (capaTematica != null &&
                 this.id !== 'habilitacionesUrbanas' &&

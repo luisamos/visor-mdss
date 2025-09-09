@@ -13,7 +13,7 @@ let helpTooltipElement,
     draw,
     listener;
 
-const radios = document.querySelectorAll('input[name="btnradio"]'),
+const radios = document.querySelectorAll('input[name="btnradio2"]'),
     limpiarMedir = document.getElementById('limpiarMedir');
 
 function createVectorLayer() {
@@ -22,10 +22,10 @@ function createVectorLayer() {
         source: new VectorSource(),
         style: new Style({
             fill: new Fill({ color: 'rgba(255, 255, 255, 0.2)' }),
-            stroke: new Stroke({ color: '#ffcc33', width: 2 }),
+            stroke: new Stroke({ color: '#0000ff', width: 2 }),
             image: new CircleStyle({
                 radius: 7,
-                fill: new Fill({ color: '#ffcc33' })
+                fill: new Fill({ color: '#0000ff' })
             })
         })
     });
@@ -137,8 +137,7 @@ function cleanUpDrawInteractions() {
 }
 
 function limpiarTodo() {
-    medirDistancia.classList.remove('selected');
-    medirSuperficie.classList.remove('selected');
+
     cleanUpDrawInteractions(map);
     global.mapa.getOverlays().clear();
     global.mapa.getLayers().getArray().forEach(layer => {
@@ -152,7 +151,7 @@ radios.forEach(radio => {
     radio.addEventListener("change", () => {
         if (radio.checked) {
             cleanUpDrawInteractions();
-            if (radio.id === 'medirDistancia') {
+            if (radio.id === 'medirPerimetro') {
                 configurar('LineString', formatLength);
             }
             else configurar('Polygon', formatArea);

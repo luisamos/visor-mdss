@@ -23,7 +23,7 @@ export function generarIdUnico(tipo) {
   return `${tipo}${Date.now()}${contadorCapas++}`;
 }
 
-export const IS_DEV = true,
+export const IS_DEV = false,
   centroide3857 = [-8006739.31529856, -1520718.334818567],
   proyeccion3857 = "EPSG:3857",
   proyeccion4326 = "EPSG:4326",
@@ -122,7 +122,7 @@ export const IS_DEV = true,
     {
       id: "ejeVias",
       texto:
-        '<div class="legend-item"><i style="background:#adadad"></i> Eje de vías</div>',
+        '<div class="legend-item"><i style="background:#7FFF00"></i> Eje de vías</div>',
     },
     {
       id: "predios",

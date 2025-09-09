@@ -30,17 +30,17 @@ global.sector041011.set("id", "mdss-sector041011");
 
 //Capas geográficas
 let provincias = new ImageLayer({
-    source: new ImageWMS({
-      url: direccionServicioWMS,
-      params: {
-        LAYERS: "limite_provincial",
-        FORMAT: formatoPNG,
-        TRANSPARENT: true,
-      },
-      ratio: 1,
-    }),
-    visible: true,
+  source: new ImageWMS({
+    url: direccionServicioWMS,
+    params: {
+      LAYERS: "limite_provincial",
+      FORMAT: formatoPNG,
+      TRANSPARENT: true,
+    },
+    ratio: 1,
   }),
+  visible: true,
+}),
   distritos = new ImageLayer({
     source: new ImageWMS({
       url: direccionServicioWMS,
@@ -81,7 +81,7 @@ let provincias = new ImageLayer({
     source: new ImageWMS({
       url: direccionServicioWMS,
       params: {
-        LAYERS: "habilitacionesUrbanas",
+        LAYERS: "habilitacion_urbana",
         FORMAT: formatoPNG,
         TRANSPARENT: true,
       },
@@ -93,7 +93,7 @@ let provincias = new ImageLayer({
     source: new ImageWMS({
       url: direccionServicioWMS,
       params: {
-        LAYERS: "serviciosBasicos",
+        LAYERS: "servicio_basicos",
         FORMAT: formatoPNG,
         TRANSPARENT: true,
       },
@@ -105,7 +105,7 @@ let provincias = new ImageLayer({
     source: new ImageWMS({
       url: direccionServicioWMS,
       params: {
-        LAYERS: "clasificacionPredios",
+        LAYERS: "clasificacion_predio",
         FORMAT: formatoPNG,
         TRANSPARENT: true,
       },
@@ -117,7 +117,7 @@ let provincias = new ImageLayer({
     source: new ImageWMS({
       url: direccionServicioWMS,
       params: {
-        LAYERS: "tiposPersonas",
+        LAYERS: "tipo_persona",
         FORMAT: formatoPNG,
         TRANSPARENT: true,
       },
@@ -137,7 +137,7 @@ let provincias = new ImageLayer({
     source: new ImageWMS({
       url: direccionServicioWMS,
       params: {
-        LAYERS: "areasInvadidas",
+        LAYERS: "areas_invadidas",
         FORMAT: formatoPNG,
         TRANSPARENT: true,
       },
@@ -156,7 +156,7 @@ let provincias = new ImageLayer({
   ejeVias = new ImageLayer({
     source: new ImageWMS({
       url: direccionServicioWMS,
-      params: { LAYERS: "ejeVias", FORMAT: formatoPNG, TRANSPARENT: true },
+      params: { LAYERS: "eje_via", FORMAT: formatoPNG, TRANSPARENT: true },
       ratio: 1,
     }),
     visible: false,
@@ -204,10 +204,10 @@ export let capasGeograficas = [
   serviciosBasicos,
   clasificacionPredios,
   tiposPersonas,
-  puertas,
-  areasInvadidas,
-  parques,
+  //puertas,
+  //areasInvadidas,
+  //parques,
   ejeVias,
-  predios,
+  //predios,
   global.dibujoGeometria,
 ];

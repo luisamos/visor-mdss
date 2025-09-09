@@ -13,7 +13,7 @@ import {
 } from "./configuracion";
 
 global.dibujo = null;
-const radios = document.querySelectorAll("input[name='btnradio']"),
+const radios = document.querySelectorAll("input[name='btnradio1']"),
   descargarDibujo = document.getElementById("descargarDibujo"),
   limpiarDibujo = document.getElementById("limpiarDibujo");
 
