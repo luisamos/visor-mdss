@@ -1,0 +1,27 @@
+{
+  "name": "visor-mdw",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview --host"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@simonwep/pickr": "^1.9.1",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.13.1",
+    "feather-icons": "^4.29.2",
+    "file-saver": "^2.0.5",
+    "file-type": "^21.0.0",
+    "jszip": "^3.10.1",
+    "ol": "latest",
+    "perfect-scrollbar": "^1.5.3",
+    "proj4": "^2.14.0",
+    "sanitize-filename": "^1.6.3",
+    "shpjs": "^6.1.0"
+  }
+}
