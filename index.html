@@ -390,12 +390,12 @@
             data-bs-title="Conectar a servicios web"><span class="img-svg-cs"></span></button>
           <button data-panel="panel4" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-title="Ubicar coordenadas"><span class="img-svg-uc"></span></button>
-          <button id="obtenerCoordenadas" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Obtener coordenadas"><span class="img-svg-oc"></span></button>
+          <!--<button id="btnObtenerCoordenadas" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-title="Obtener coordenadas"><span class="img-svg-oc"></span></button>-->
           <button data-panel="panel5" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-title="Calcular distancia y/o superficie"><span class="img-svg-csp"></span></button>
           <button data-panel="panel6" class="btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="leyenda"><i data-feather="list" class="icon-sm"></i></button>
+            data-bs-title="Mostrar y/o ocultar Leyenda"><i data-feather="list" class="icon-sm"></i></button>
         </div>
       </div>
 
@@ -596,9 +596,9 @@
             </label>
             <select id="sistemaReferencia" class="form-select form-select-sm">
               <option value="4326" selected>WGS84 (decimales)</option>
-            <option value="32717">WGS84 17S</option>
-            <option value="32718">WGS84 18S</option>
-            <option value="32719">WGS84 19S</option>
+              <option value="32717">WGS84 17S</option>
+              <option value="32718">WGS84 18S</option>
+              <option value="32719">WGS84 19S</option>
             </select>
           </div>
           <div class="mb-3">
@@ -607,12 +607,12 @@
             </label>
             <input id="coordenadaX" type="text" class="form-control form-control-sm">
           </div>
-          <div class="mb-3">            
-              <label for="coordenadaY" class="col-form-label-sm">
-                Latitud:
-              </label>
-              <input id="coordenadaY" type="text" class="form-control form-control-sm">            
-          </div>          
+          <div class="mb-3">
+            <label for="coordenadaY" class="col-form-label-sm">
+              Latitud:
+            </label>
+            <input id="coordenadaY" type="text" class="form-control form-control-sm">
+          </div>
           <div class="mb-3">
             <div id="mensajeUbicarCoordenadas"></div>
           </div>
@@ -639,20 +639,19 @@
             <label class="col-form-label-sm">
               Elegir:
             </label>
-            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-              <input type="radio" class="btn-check" name="btnradio" id="None" autocomplete="off" checked>
-              <label class="btn btn-outline-primary btn-sm" for="None">Ninguno</label>
-
+            <div class="btn-group" role="group">
               <input type="radio" class="btn-check" name="btnradio" id="medirPerimetro" autocomplete="off">
-              <label class="btn btn-outline-primary btn-sm" for="medirPerimetro">Perímetro</label>
+              <label class="btn btn-outline-primary btn-sm" for="medirPerimetro"><i class="bi bi-rulers"></i>
+                Perímetro</label>
 
               <input type="radio" class="btn-check" name="btnradio" id="medirSuperficie" autocomplete="off">
-              <label class="btn btn-outline-primary btn-sm" for="medirSuperficie">Superficie</label>              
+              <label class="btn btn-outline-primary btn-sm" for="medirSuperficie"><i class="bi bi-pentagon"></i>
+                Superficie</label>
             </div>
           </div>
           <hr class="my-3" />
 
-          <div class="d-flex justify-content-center gap-2">            
+          <div class="d-flex justify-content-center gap-2">
             <button id="limpiarMedir" class="btn btn-outline-danger btn-sm">
               <i class="bi bi-trash"></i> Limpiar
             </button>

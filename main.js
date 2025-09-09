@@ -65,3 +65,16 @@ import './assets/js/controlGraficar';
 
 // 7. Control cargar servicios web
 import './assets/js/controlCargarServiciosWeb';
+
+// 8. Control ubicar coordenadas
+import './assets/js/controlUbicarCoordenadas';
+
+// 9. Control obtener coordenadas
+/*import { obtenerCoordenadas } from './assets/js/controlObtenerCoordenadas';
+global.mapa.on('click', function (e) {
+  global.activoInformacion = "";
+  obtenerCoordenadas(e);
+});*/
+
+// 10. Control calcular distancia y superficie
+import './assets/js/controlCalcularDistanciaSuperficie';
